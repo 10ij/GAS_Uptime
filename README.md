@@ -48,3 +48,5 @@ To run the checks on a schedule (e.g., every 10 or 15 minutes):
 # AI Usage
 
 AI was used for Readme, HTML, and CSS
+
+No Git history because this was made in GAS IDE, no version control i'm aware of there
