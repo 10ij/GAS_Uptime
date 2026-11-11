@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 20px; background: #f4f5f7; color: #333; }
+      h1, h2 { color: #111; }
+      .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
+      th, td { border: 1px solid #e1e4e8; padding: 10px 12px; text-align: left; font-size: 14px; }
+      th { background: #f6f8fa; font-weight: 600; }
+      tr:nth-child(even) { background: #fafbfc; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Uptime Dashboard</h1>
+      
+      <h2>Monitors</h2>
+      <table>
+        <? for (var i = 0; i < monitorsData.length; i++) { ?>
+          <tr>
+            <? for (var j = 0; j < monitorsData[i].length; j++) { ?>
+              <? if (i === 0) { ?>
+                <th><?= monitorsData[i][j] ?></th>
+              <? } else { ?>
+                <td><?= monitorsData[i][j] ?></td>
+              <? } ?>
+            <? } ?>
+          </tr>
+        <? } ?>
+      </table>
+
+      <h2>Historical Logs</h2>
+      <table>
+        <? for (var i = 0; i < historicalData.length; i++) { ?>
+          <tr>
+            <? for (var j = 0; j < historicalData[i].length; j++) { ?>
+              <? if (i === 0) { ?>
+                <th><?= historicalData[i][j] ?></th>
+              <? } else { ?>
+                <td><?= historicalData[i][j] ?></td>
+              <? } ?>
+            <? } ?>
+          </tr>
+        <? } ?>
+      </table>
+    </div>
+  </body>
+</html>
